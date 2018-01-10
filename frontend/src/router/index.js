@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import BoilerplateSplash from '@/components/BoilerplateSplash'
+import Menu from '@/components/Menu'
+import Splash from '@/components/Splash'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
+      path: '/menu',
+      name: 'Menu',
+      component: Menu
+    },
+    {
       path: '/',
-      name: 'BoilerplateSplash',
-      component: BoilerplateSplash
+      name: 'Splash',
+      component: Splash
     }
   ]
 })

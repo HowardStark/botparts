@@ -1,11 +1,16 @@
 <template>
   <div id="app">
-    <router-view/>
+    <transition>
+      <router-view/>
+    </transition>
   </div>
 </template>
 
 <script>
+import NavBar from '@/components/UIComponents/NavBar'
+
 export default {
+  components: {NavBar},
   name: 'app'
 }
 </script>
@@ -19,6 +24,9 @@ export default {
 }
 body {
   margin: 0;
+  font-size: 14px;
+  background: #2b2d42;
+  user-select: none;
 }
 * {
   box-sizing: border-box;
