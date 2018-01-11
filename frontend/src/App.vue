@@ -7,10 +7,7 @@
 </template>
 
 <script>
-import NavBar from '@/components/UIComponents/NavBar'
-
 export default {
-  components: {NavBar},
   name: 'app'
 }
 </script>
