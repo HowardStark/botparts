@@ -18,8 +18,8 @@ export default {
 .container {
   color: #2b2d42;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 10px;
   min-height: 100vh;
   width: 100vw;

@@ -25,6 +25,7 @@
     <div class="column center">
       <div class="addpart">
         <i class="icon ion-ios-plus-empty"/>
+        <div class="subhead">ADD PART</div>
       </div>
     </div>
     <div class="column right">
@@ -68,10 +69,11 @@ export default {
   width: 100%;
   display: flex;
   flex-grow: 1;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
   opacity: 0;
+  flex-flow: row wrap;
   transition: opacity 0.2s ease;
 }
 .active.inner {
@@ -87,6 +89,13 @@ export default {
   transition: background-color 0.2s ease;
   border-radius: 2px;
   cursor: pointer;
+  margin-bottom: 10px;
+}
+.addpart .icon {
+  margin-right: 10px;
+}
+.addpart .subhead {
+  margin-top: -3px;
 }
 .add:hover {
   background: white;
@@ -104,27 +113,36 @@ export default {
   align-items: center;
 }
 .left {
-  flex-grow: 2;
-  width: 200px;
+  flex-basis: 200px;
+  margin-right: 10px;
 }
 .column {
   height: 100%;
-  flex-shrink: 0;
-  height: fill-available;
-  height: -webkit-fill-available;
+  flex-shrink: 10;
   display: flex;
   justify-content: flex-start;
+  flex-grow: 1;
   align-items: center;
   flex-flow: column wrap;
 }
 .right {
-  flex-grow: 1;
+  flex-basis: 50px;
 }
 .center {
-  flex-grow: 5;
-  margin-left: 10px;
-  width: 800px;
+  flex-grow: 10;
+  flex-basis: 200px;
+  flex-shrink: 1;
   margin-right: 10px;
+}
+@media screen and (max-width: 432px){
+  .left {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 314px){
+  .center {
+    margin-right: 0;
+  }
 }
 .icon {
   font-size: 40px;
@@ -146,7 +164,7 @@ export default {
   transition: background-color 0.2s ease,
               color 0.2s ease;
 }
-.item:not(:last-child) {
+.item {
   margin-bottom: 10px;
 }
 .itemhead {
@@ -178,6 +196,7 @@ export default {
   background: rgba(255,255,255,0.6);
   border-radius: 2px;
   height: 60px;
+  margin-bottom: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -190,7 +209,7 @@ export default {
   background: rgba(255,255,255,0.6);
   border-radius: 2px;
 }
-.part:not(:last-child) {
+.part {
   margin-bottom: 10px;
 }
 .up {
